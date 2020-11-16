@@ -1,6 +1,8 @@
 package com.hrms.utils;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -139,7 +141,7 @@ public class CommonMethods extends PageInitializer { // we need the object of we
 	 * 
 	 */
 
-	public static void dismissAccept() {      //clicking cancel gibi 
+	public static void dismissAlert() {      //clicking cancel gibi 
 
 		try {
 			Alert alert = driver.switchTo().alert();
@@ -240,7 +242,7 @@ public class CommonMethods extends PageInitializer { // we need the object of we
 			}
 		}
 	}
-
+   
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME); // create the obj of WebDriverWait
 																						// and return as WebDriverWait
@@ -312,14 +314,23 @@ public class CommonMethods extends PageInitializer { // we need the object of we
 	 * @param filename
 	 */
 	
-	public static void takesScreenshot(String filename) { // we need a file
+	public static String takeScreenshot(String filename) { // we need a file
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		File file = ts.getScreenshotAs(OutputType.FILE);
+		File file = ts.getScreenshotAs(OutputType.FILE); //we have file 
+		String destinationFile = Constants.SCREENSHOT_FILEPATH + filename + getTimeStamp()+" .png";//where is my file. we want to place in destinationfile
+		
 		try {
-			FileUtils.copyFile(file, new File("screenshot/" + filename + ".png"));
+			FileUtils.copyFile(file, new File(destinationFile));//attached the screenshot to destinatinFile here
 		} catch (Exception ex) {
 			System.out.println("Cannot take acreenshot!");
 		}
+		return destinationFile;
+	}
+	
+	public static String getTimeStamp() {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		return sdf.format(date.getTime());
 	}
 	
 

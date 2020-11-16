@@ -15,7 +15,7 @@ public class ConfigsReader { // bring fileinputstream
 	 * @param filePath
 	 */
 
-	
+	 
 	public static void readProperties(String filePath) { // this method read our properties files
 		try {
 			FileInputStream fis = new FileInputStream(filePath);

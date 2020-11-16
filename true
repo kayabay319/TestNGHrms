@@ -1,6 +1,6 @@
-[1590861927.856][INFO]: Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 1508
-[1590861927.856][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[1590861927.887][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND InitSession {
+[1602181205.069][INFO]: Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 26831
+[1602181205.069][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1602181205.302][INFO]: [869e984faa803e96652282cd9438b5ee] COMMAND InitSession {
    "capabilities": {
       "firstMatch": [ {
          "browserName": "chrome",
@@ -18,7 +18,7 @@
       }
    }
 }
-[1590861927.888][INFO]: Populating Preferences file: {
+[1602181205.303][INFO]: Populating Preferences file: {
    "alternate_error_pages": {
       "enabled": false
    },
@@ -71,7 +71,7 @@
       "enabled": false
    }
 }
-[1590861927.888][INFO]: Populating Local State file: {
+[1602181205.303][INFO]: Populating Local State file: {
    "background_mode": {
       "enabled": false
    },
@@ -81,101 +81,6 @@
       }
    }
 }
-[1590861927.889][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension=/var/folders/20/vnj9l2qn2yz526m659xhdk180000gn/T/.com.google.Chrome.bLRD0N/internal --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/20/vnj9l2qn2yz526m659xhdk180000gn/T/.com.google.Chrome.lj4oIW data:,
-[1590861928.534][INFO]: resolved localhost to ["127.0.0.1","::1"]
-[1590861928.552][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE InitSession {
-   "capabilities": {
-      "acceptInsecureCerts": false,
-      "browserName": "chrome",
-      "browserVersion": "83.0.4103.61",
-      "chrome": {
-         "chromedriverVersion": "83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416})",
-         "userDataDir": "/var/folders/20/vnj9l2qn2yz526m659xhdk180000gn/T/.com.google.Chrome.lj4oIW"
-      },
-      "goog:chromeOptions": {
-         "debuggerAddress": "localhost:58953"
-      },
-      "networkConnectionEnabled": false,
-      "pageLoadStrategy": "normal",
-      "platformName": "mac os x",
-      "proxy": {
-
-      },
-      "setWindowRect": true,
-      "strictFileInteractability": false,
-      "timeouts": {
-         "implicit": 0,
-         "pageLoad": 300000,
-         "script": 30000
-      },
-      "unhandledPromptBehavior": "dismiss and notify",
-      "webauthn:virtualAuthenticators": true
-   },
-   "sessionId": "0c608df5e9dca36594203b1a1ab59b0a"
-}
-[1590861928.556][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND MaximizeWindow {
-
-}
-[1590861928.556][INFO]: Waiting for pending navigations...
-[1590861928.557][INFO]: Done waiting for pending navigations. Status: ok
-[1590861928.557][INFO]: resolved localhost to ["127.0.0.1","::1"]
-[1590861928.681][INFO]: Waiting for pending navigations...
-[1590861928.681][INFO]: Done waiting for pending navigations. Status: ok
-[1590861928.682][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE MaximizeWindow {
-   "height": 1050,
-   "width": 1792,
-   "x": 0,
-   "y": 23
-}
-[1590861928.684][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND SetTimeouts {
-   "implicit": 15000
-}
-[1590861928.684][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE SetTimeouts
-[1590861928.687][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND Navigate {
-   "url": "https://opensource-demo.orangehrmlive.com/index.php/leave/viewLeaveList/reset/1"
-}
-[1590861928.687][INFO]: Waiting for pending navigations...
-[1590861928.688][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.007][INFO]: Waiting for pending navigations...
-[1590861929.352][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.352][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE Navigate
-[1590861929.356][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND FindElement {
-   "using": "css selector",
-   "value": "#txtUsername"
-}
-[1590861929.356][INFO]: Waiting for pending navigations...
-[1590861929.357][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.363][INFO]: Waiting for pending navigations...
-[1590861929.364][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.364][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE FindElement {
-   "element-6066-11e4-a52e-4f735466cecf": "cfb8e992-3c59-4539-abe1-cc1696de137c"
-}
-[1590861929.367][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND ClearElement {
-   "id": "cfb8e992-3c59-4539-abe1-cc1696de137c"
-}
-[1590861929.367][INFO]: Waiting for pending navigations...
-[1590861929.368][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.382][INFO]: 
-	=== NOTE: ===
-	The Clear command in ChromeDriver 2.43 and above
-	has been updated to conform to the current standard,
-	including raising blur event after clearing.
-
-[1590861929.388][INFO]: Waiting for pending navigations...
-[1590861929.389][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.389][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE ClearElement
-[1590861929.391][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND FindElement {
-   "using": "css selector",
-   "value": "#txtUsername"
-}
-[1590861929.391][INFO]: Waiting for pending navigations...
-[1590861929.392][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.394][INFO]: Waiting for pending navigations...
-[1590861929.394][INFO]: Done waiting for pending navigations. Status: ok
-[1590861929.394][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE FindElement {
-   "element-6066-11e4-a52e-4f735466cecf": "cfb8e992-3c59-4539-abe1-cc1696de137c"
-}
-[1590861929.398][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] COMMAND Quit {
-
-}
-[1590861929.451][INFO]: [0c608df5e9dca36594203b1a1ab59b0a] RESPONSE Quit
+[1602181205.304][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension=/var/folders/20/vnj9l2qn2yz526m659xhdk180000gn/T/.com.google.Chrome.r6QGi3/internal --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/20/vnj9l2qn2yz526m659xhdk180000gn/T/.com.google.Chrome.qEuVzs data:,
+[1602181206.826][INFO]: Failed to connect to Chrome. Attempting to kill it.
+[1602181207.003][INFO]: [869e984faa803e96652282cd9438b5ee] RESPONSE InitSession ERROR session not created: This version of ChromeDriver only supports Chrome version 83

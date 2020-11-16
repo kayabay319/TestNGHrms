@@ -1,42 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11566" started-at="2020-05-30T14:05:17 EDT" finished-at="2020-05-30T14:05:29 EDT">
+  <suite name="Default suite" duration-ms="2442" started-at="2020-10-08T14:20:04 EDT" finished-at="2020-10-08T14:20:07 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11566" started-at="2020-05-30T14:05:17 EDT" finished-at="2020-05-30T14:05:29 EDT">
+    <test name="Default test" duration-ms="2442" started-at="2020-10-08T14:20:04 EDT" finished-at="2020-10-08T14:20:07 EDT">
       <class name="com.hrms.testcases.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="setUp" is-config="true" duration-ms="3317" started-at="2020-05-30T14:05:17 EDT" finished-at="2020-05-30T14:05:21 EDT">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="generateReport" is-config="true" duration-ms="97" started-at="2020-10-08T14:20:04 EDT" finished-at="2020-10-08T14:20:04 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="openBrowser" is-config="true" duration-ms="1513" started-at="2020-05-30T14:05:21 EDT" finished-at="2020-05-30T14:05:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="emptyUsernameLogin()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="emptyUsernameLogin" duration-ms="48" started-at="2020-05-30T14:05:22 EDT" finished-at="2020-05-30T14:05:22 EDT">
-          <exception class="java.lang.IllegalArgumentException">
+        </test-method> <!-- generateReport -->
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="setUp" is-config="true" duration-ms="2305" started-at="2020-10-08T14:20:04 EDT" finished-at="2020-10-08T14:20:07 EDT">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 83
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'gulbahars-MacBook-Pro.local', ip: '2601:18f:700:b1d0:9cd9:b5c5:31aa:96d4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010f359e99 chromedriver + 4808345
+1   chromedriver                        0x000000010f2f45f3 chromedriver + 4392435
+2   chromedriver                        0x000000010ef8029d chromedriver + 770717
+3   chromedriver                        0x000000010eedd689 chromedriver + 104073
+4   chromedriver                        0x000000010eed9940 chromedriver + 88384
+5   chromedriver                        0x000000010eed6c99 chromedriver + 76953
+6   chromedriver                        0x000000010ef08fa3 chromedriver + 282531
+7   chromedriver                        0x000000010ef05da3 chromedriver + 269731
+8   chromedriver                        0x000000010eedf8dd chromedriver + 112861
+9   chromedriver                        0x000000010eee0875 chromedriver + 116853
+10  chromedriver                        0x000000010f31c47f chromedriver + 4555903
+11  chromedriver                        0x000000010f32977a chromedriver + 4609914
+12  chromedriver                        0x000000010f329509 chromedriver + 4609289
+13  chromedriver                        0x000000010f300319 chromedriver + 4440857
+14  chromedriver                        0x000000010f329d03 chromedriver + 4611331
+15  chromedriver                        0x000000010f312083 chromedriver + 4513923
+16  chromedriver                        0x000000010f340454 chromedriver + 4703316
+17  chromedriver                        0x000000010f35ff57 chromedriver + 4833111
+18  libsystem_pthread.dylib             0x00007fff728dae65 _pthread_start + 148
+19  libsystem_pthread.dylib             0x00007fff728d683b thread_start + 15
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-at com.hrms.utils.CommonMethods.sendText(CommonMethods.java:34)
-at com.hrms.testcases.LoginTest.emptyUsernameLogin(LoginTest.java:57)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 83
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'gulbahars-MacBook-Pro.local', ip: '2601:18f:700:b1d0:9cd9:b5c5:31aa:96d4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010f359e99 chromedriver + 4808345
+1   chromedriver                        0x000000010f2f45f3 chromedriver + 4392435
+2   chromedriver                        0x000000010ef8029d chromedriver + 770717
+3   chromedriver                        0x000000010eedd689 chromedriver + 104073
+4   chromedriver                        0x000000010eed9940 chromedriver + 88384
+5   chromedriver                        0x000000010eed6c99 chromedriver + 76953
+6   chromedriver                        0x000000010ef08fa3 chromedriver + 282531
+7   chromedriver                        0x000000010ef05da3 chromedriver + 269731
+8   chromedriver                        0x000000010eedf8dd chromedriver + 112861
+9   chromedriver                        0x000000010eee0875 chromedriver + 116853
+10  chromedriver                        0x000000010f31c47f chromedriver + 4555903
+11  chromedriver                        0x000000010f32977a chromedriver + 4609914
+12  chromedriver                        0x000000010f329509 chromedriver + 4609289
+13  chromedriver                        0x000000010f300319 chromedriver + 4440857
+14  chromedriver                        0x000000010f329d03 chromedriver + 4611331
+15  chromedriver                        0x000000010f312083 chromedriver + 4513923
+16  chromedriver                        0x000000010f340454 chromedriver + 4703316
+17  chromedriver                        0x000000010f35ff57 chromedriver + 4833111
+18  libsystem_pthread.dylib             0x00007fff728dae65 _pthread_start + 148
+19  libsystem_pthread.dylib             0x00007fff728d683b thread_start + 15
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.hrms.testbase.BaseClass.setUp(BaseClass.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
@@ -61,48 +127,102 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyUsernameLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="closeBrowser" is-config="true" duration-ms="78" started-at="2020-05-30T14:05:22 EDT" finished-at="2020-05-30T14:05:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-05-30T14:05:22 EDT" finished-at="2020-05-30T14:05:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="setUp" is-config="true" duration-ms="1558" started-at="2020-05-30T14:05:22 EDT" finished-at="2020-05-30T14:05:24 EDT">
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="openBrowser" is-config="true" duration-ms="1785" started-at="2020-05-30T14:05:24 EDT" finished-at="2020-05-30T14:05:26 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="invalidPasswordLogin()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="invalidPasswordLogin" duration-ms="42" started-at="2020-05-30T14:05:26 EDT" finished-at="2020-05-30T14:05:26 EDT">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="SKIP" signature="timeStamp()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="timeStamp" duration-ms="0" started-at="2020-10-08T14:20:07 EDT" finished-at="2020-10-08T14:20:07 EDT">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 83
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'gulbahars-MacBook-Pro.local', ip: '2601:18f:700:b1d0:9cd9:b5c5:31aa:96d4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010f359e99 chromedriver + 4808345
+1   chromedriver                        0x000000010f2f45f3 chromedriver + 4392435
+2   chromedriver                        0x000000010ef8029d chromedriver + 770717
+3   chromedriver                        0x000000010eedd689 chromedriver + 104073
+4   chromedriver                        0x000000010eed9940 chromedriver + 88384
+5   chromedriver                        0x000000010eed6c99 chromedriver + 76953
+6   chromedriver                        0x000000010ef08fa3 chromedriver + 282531
+7   chromedriver                        0x000000010ef05da3 chromedriver + 269731
+8   chromedriver                        0x000000010eedf8dd chromedriver + 112861
+9   chromedriver                        0x000000010eee0875 chromedriver + 116853
+10  chromedriver                        0x000000010f31c47f chromedriver + 4555903
+11  chromedriver                        0x000000010f32977a chromedriver + 4609914
+12  chromedriver                        0x000000010f329509 chromedriver + 4609289
+13  chromedriver                        0x000000010f300319 chromedriver + 4440857
+14  chromedriver                        0x000000010f329d03 chromedriver + 4611331
+15  chromedriver                        0x000000010f312083 chromedriver + 4513923
+16  chromedriver                        0x000000010f340454 chromedriver + 4703316
+17  chromedriver                        0x000000010f35ff57 chromedriver + 4833111
+18  libsystem_pthread.dylib             0x00007fff728dae65 _pthread_start + 148
+19  libsystem_pthread.dylib             0x00007fff728d683b thread_start + 15
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-at com.hrms.utils.CommonMethods.sendText(CommonMethods.java:34)
-at com.hrms.testcases.LoginTest.invalidPasswordLogin(LoginTest.java:43)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 83
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'gulbahars-MacBook-Pro.local', ip: '2601:18f:700:b1d0:9cd9:b5c5:31aa:96d4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010f359e99 chromedriver + 4808345
+1   chromedriver                        0x000000010f2f45f3 chromedriver + 4392435
+2   chromedriver                        0x000000010ef8029d chromedriver + 770717
+3   chromedriver                        0x000000010eedd689 chromedriver + 104073
+4   chromedriver                        0x000000010eed9940 chromedriver + 88384
+5   chromedriver                        0x000000010eed6c99 chromedriver + 76953
+6   chromedriver                        0x000000010ef08fa3 chromedriver + 282531
+7   chromedriver                        0x000000010ef05da3 chromedriver + 269731
+8   chromedriver                        0x000000010eedf8dd chromedriver + 112861
+9   chromedriver                        0x000000010eee0875 chromedriver + 116853
+10  chromedriver                        0x000000010f31c47f chromedriver + 4555903
+11  chromedriver                        0x000000010f32977a chromedriver + 4609914
+12  chromedriver                        0x000000010f329509 chromedriver + 4609289
+13  chromedriver                        0x000000010f300319 chromedriver + 4440857
+14  chromedriver                        0x000000010f329d03 chromedriver + 4611331
+15  chromedriver                        0x000000010f312083 chromedriver + 4513923
+16  chromedriver                        0x000000010f340454 chromedriver + 4703316
+17  chromedriver                        0x000000010f35ff57 chromedriver + 4833111
+18  libsystem_pthread.dylib             0x00007fff728dae65 _pthread_start + 148
+19  libsystem_pthread.dylib             0x00007fff728d683b thread_start + 15
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.hrms.testbase.BaseClass.setUp(BaseClass.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
@@ -127,84 +247,18 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidPasswordLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="closeBrowser" is-config="true" duration-ms="81" started-at="2020-05-30T14:05:26 EDT" finished-at="2020-05-30T14:05:26 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-05-30T14:05:26 EDT" finished-at="2020-05-30T14:05:26 EDT">
+        </test-method> <!-- timeStamp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-08T14:20:07 EDT" finished-at="2020-10-08T14:20:07 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="setUp" is-config="true" duration-ms="1483" started-at="2020-05-30T14:05:26 EDT" finished-at="2020-05-30T14:05:27 EDT">
+        <test-method status="PASS" signature="writeReport()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="writeReport" is-config="true" duration-ms="1" started-at="2020-10-08T14:20:07 EDT" finished-at="2020-10-08T14:20:07 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="openBrowser" is-config="true" duration-ms="1511" started-at="2020-05-30T14:05:27 EDT" finished-at="2020-05-30T14:05:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="validAdminLogin()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="validAdminLogin" duration-ms="42" started-at="2020-05-30T14:05:29 EDT" finished-at="2020-05-30T14:05:29 EDT">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-at com.hrms.utils.CommonMethods.sendText(CommonMethods.java:34)
-at com.hrms.testcases.LoginTest.validAdminLogin(LoginTest.java:29)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validAdminLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="closeBrowser" is-config="true" duration-ms="80" started-at="2020-05-30T14:05:29 EDT" finished-at="2020-05-30T14:05:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@74650e52]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-05-30T14:05:29 EDT" finished-at="2020-05-30T14:05:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- writeReport -->
       </class> <!-- com.hrms.testcases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

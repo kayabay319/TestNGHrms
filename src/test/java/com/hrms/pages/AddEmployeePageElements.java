@@ -9,92 +9,86 @@ import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
-//Automate user stories below:
-//US 12678 As an Admin I should be able to create login credentials while adding employee
-//
-//US 67789 As an admin while adding employee if I leave required fields empty I should see “Required” message
-//Note: first name and last name are required fields 
 public class AddEmployeePageElements extends CommonMethods {
-
-	@FindBy(xpath = "//a[@id='menu_pim_addEmployee']")
-	public WebElement addEmployee;
-
-	@FindBy(id = "firstName")
-	public WebElement firstName;
-
-	@FindBy(id = "lastName")
-	public WebElement lastName;
-
-	@FindBy(id = "employeeId")
-	public WebElement employeeId;
-
-	@FindBy(id = "photofile")
-	public WebElement choosePhoto;
-
-	@FindBy(id = "chkLogin")
-	public WebElement checkboxLoginDetails;
-
-	@FindBy(id = "user_name")
-	public WebElement username;
-
-	@FindBy(id = "user_password")
-	public WebElement password;
-
-	@FindBy(id = "re_password")
-	public WebElement confirmPassword;
-
-	@FindBy(xpath = "//img[@id='empPic']")
-	public WebElement verify;
-
-	@FindBy(name = "status")
-	public WebElement status;
-
-	@FindBy(id = "btnSave")
-	public WebElement saveBtn;
-
-	@FindBy(xpath="//span[@for='firstName']")//"Required"
-	public WebElement requiredFirstNameErrMsg;
 	
-	@FindBy(xpath="//span[@for='lastName']")
-	public WebElement requiredLastNameErrMsg;
-	
-	//Errormaessage= "Should have at least 5 characters"
-	@FindBy(xpath="//span[@for='user_name']")
-	public WebElement usernameErrorMsg;
-	//Should have at least 8 characters
-	@FindBy(xpath="//span[@for='user_password']")
-	public WebElement passwordErrorMsg;
-	
-	@FindBy(xpath="//span[@for='re_password']")
-	public WebElement confirmErrorMsg;
-	
-
-	public AddEmployeePageElements() {
-		PageFactory.initElements(BaseClass.driver, this);
+		@FindBy(xpath = "//label[text()='Full Name']")
+		public WebElement fullname;
+		@FindBy(xpath = "//label[text()='Employee Id']")
+		public WebElement empId;
+		@FindBy(xpath = "//label[text()='Photograph']")
+		public WebElement photograph;
+		
+		@FindBy(xpath="//label[text()='Create Login Details']")
+		public WebElement createLogin;
+		@FindBy(id = "photofile")
+		public WebElement uploadpic;
+		@FindBy(id = "firstName")
+		public WebElement empFirstname;
+		@FindBy(id = "middleName")
+		public WebElement empMiddlename;
+		
+		@FindBy(id = "lastName")
+		public WebElement empLastname;
+		
+		@FindBy(id = "chkLogin")
+		public WebElement chkLoginDetails;
+		
+		@FindBy(id="user_name")
+		public WebElement userName;
+		
+		@FindBy(id="user_password")
+		public WebElement userPassword;
+		
+		@FindBy(id="re_password")
+		public WebElement confirmPassword;
+		
+		@FindBy(xpath="//div[@id='profile-pic']/h1")
+		public WebElement verifyEmp;
+		
+	   @FindBy(id = "btnSave")
+		public WebElement save;
+		@FindBy(id="personal_txtEmployeeId")
+		public WebElement personalID;
+		
+		@FindBy (xpath="//div[@id='sidebar']/div/h1")
+		public WebElement addedEmployee;
+	    @FindBy(xpath="//span[@for='firstName']")
+	    public WebElement requiredfName;
+	    @FindBy(xpath="//span[@for='lastName']")
+	    public WebElement requiredlName;
+		@FindBy(id="status")
+		public WebElement status;
+		
+		
+		
+	    public AddEmployeePageElements() {
+			PageFactory.initElements(driver, this);	}
+		
+		public void employeeDetails(String fname, String lname ) {
+		
+			sendText(empFirstname, fname);
+			sendText(empLastname,lname);
+			sendText(uploadpic, ConfigsReader.getProperty("filepath"));
+		
+	    }
+		public void CreateLogindetails( ) {
+			chkLoginDetails.click();
+			sendText(userName,ConfigsReader.getProperty("usrName"));
+			sendText(userPassword,ConfigsReader.getProperty("usrPassWord"));
+			sendText(confirmPassword, ConfigsReader.getProperty("usrPassWord"));
+	        Select select= new Select (status);
+			select.selectByVisibleText("Enabled");
+			save.click();
+		}
+		
+		public void CreateLogin(String usrName, String usrPswrd ) {
+			chkLoginDetails.click();
+			sendText(userName,usrName);
+			sendText(userPassword,usrPswrd);
+			sendText(confirmPassword, usrPswrd);
+	        Select select= new Select (status);
+			select.selectByVisibleText("Enabled");
+			save.click();
+		
+		}
 	}
-
-//	public void employeeDetails(String firstname, String lastname) {
-//	CommonMethods.sendText(firstN, firstname);
-//	CommonMethods.sendText(lastN, lastname);
-//    }
-//		
-	public void addEmployeeDetails(String firstname, String lastname) {
-		sendText(firstName, firstname);
-		sendText(lastName, lastname);
-		//sendText(empID, empId);
-		sendText(addEmp.choosePhoto, ConfigsReader.getProperty("filePath"));
-		click(checkboxLoginDetails);
-	}
-
-	public void createLoginDetails() {  //I created this
-		sendText(username, ConfigsReader.getProperty("username"));
-		sendText(password,ConfigsReader.getProperty("password"));
-		sendText(confirmPassword, ConfigsReader.getProperty("repassword"));
-		Select select = new Select (status);
-		select.selectByVisibleText("Enabled");
-		click(saveBtn);
-	
-	}
-	}
-
-

@@ -11,23 +11,30 @@ public class DashboardPageElements extends CommonMethods {
 
 	@FindBy(id = "welcome")
 	public WebElement welcome;
-
-	@FindBy(xpath = "//div[@id='branding']/a[1]/img")
+	
+	@FindBy(xpath ="//div[@id='branding']/a[1]/img")
 	public WebElement logo;
-
+	
+	@FindBy(xpath ="//a[@id='menu_pim_viewPimModule']")
+	public WebElement PIM;
+	
 	@FindBy(xpath = "//a[@id='menu_pim_addEmployee']")
 	public WebElement addEmp;
-
-	@FindBy(xpath = "//a[@id='menu_pim_viewPimModule']/b")
-	public WebElement PIM;
-
+	
+	@FindBy(id = "menu_core_viewDefinedPredefinedReports")
+	public WebElement reports;
+	
 	public DashboardPageElements() {
-		PageFactory.initElements(BaseClass.driver, this);
-	}
-
+		PageFactory.initElements(driver, this);	
+	}	
+	
 	public void navigateToAddEmployee() {
-		jsClick(PIM);   //or I can use jsClick(PIM); and jsClick(addEmp);
-		jsClick(addEmp);
-	}
-
+		jsClick(PIM);
+		jsClick(addEmp);}
+	
+ public void navigateToReports() {
+	jsClick(PIM);
+	jsClick(reports);
+	
+}
 }
